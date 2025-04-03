@@ -1,10 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*ESTILOS GENERAL*/
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  color: #333;
+/*CONTENEDOR PRINC*/
+#countries-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+/*TARJETAS PAiS*/
+.country-card {
+  width: 150px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.country-card:hover {
+  transform: scale(1.1);
+}
+
+.flag {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.country-card p {
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/*MODAL*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-flag {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.modal-content h2 {
+  margin: 10px 0;
+}
+
+.modal-content p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+#close-modal {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  background: #d9534f;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-modal:hover {
+  background: #c9302c;
 }
